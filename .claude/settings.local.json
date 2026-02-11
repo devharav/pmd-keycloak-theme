@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(ls:*)",
+      "Bash(unzip:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run build-keycloak-theme:*)"
+    ]
+  }
+}
