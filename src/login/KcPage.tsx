@@ -10,6 +10,9 @@ const UserProfileFormFields = lazy(
 );
 
 const Login = lazy(() => import("./pages/Login"));
+const LoginConfigTotp = lazy(() => import("./pages/LoginConfigTotp"));
+const LoginOtp = lazy(() => import("./pages/LoginOtp"));
+const LoginUpdatePassword = lazy(() => import("./pages/LoginUpdatePassword"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -24,6 +27,27 @@ export default function KcPage(props: { kcContext: KcContext }) {
                     case "login.ftl":
                         return (
                             <Login
+                                kcContext={kcContext}
+                                i18n={i18n}
+                            />
+                        );
+                    case "login-config-totp.ftl":
+                        return (
+                            <LoginConfigTotp
+                                kcContext={kcContext}
+                                i18n={i18n}
+                            />
+                        );
+                    case "login-otp.ftl":
+                        return (
+                            <LoginOtp
+                                kcContext={kcContext}
+                                i18n={i18n}
+                            />
+                        );
+                    case "login-update-password.ftl":
+                        return (
+                            <LoginUpdatePassword
                                 kcContext={kcContext}
                                 i18n={i18n}
                             />
